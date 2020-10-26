@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: 'GmarketSansLight';
+}
+
+h1 {
+    margin: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    float:left;
+}
+
+.checkbox {
+    margin-right: 1rem;
+}
+
+#delete {
+    float: right;
+    margin-left: 5px;
+}
+
+#update {
+    float: right;
+}
+
+@font-face { 
+    font-family: 'GmarketSansLight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
