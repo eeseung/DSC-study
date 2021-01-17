@@ -23,7 +23,7 @@ if ( process.env.NODE_ENV === 'production') {
     app.use(hpp());
 } else {
     app.use(morgan('dev'));
-}
+};
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -35,14 +35,14 @@ app.use((req, res, next) => {
     logger.info('hello');
     logger.error(err.message);
     next(err);
-})
+});
 
 app.use((err, req, res) =>{
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') ==='development' ? err : {};
     res.status(err.status || 500);
     res.render('error');
-})
+});
 
 app.listen(app.get('port'), () => {
     console.log('server is running on http://localhost:', app.get('port'));
